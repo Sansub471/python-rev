@@ -1,0 +1,1 @@
+Revising all the concepts of Python learned so far, and preparing for possible python related challenges.
