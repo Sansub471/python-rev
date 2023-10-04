@@ -47,6 +47,17 @@ class Item:
                 quantity=int(item.get('quantity'))
             )
 
+    # These methods are not sending object as the first argument
+    # They functino just like regular methods.
+    @staticmethod
+    def is_integer(num):
+        if isinstance(num, float):
+            return num.is_integer()
+        elif isinstance(num, int):
+            return True
+        else:
+            return False
+
     # How to represent the instance, similar __str__
     def __repr__(self) -> str:
         return f'Item({self.name}, {self.quantity})'
@@ -78,3 +89,5 @@ print(Item.all)
 
 Item.instantiate_from_csv()
 print(Item.all)
+
+print(Item.is_integer(78.0))
