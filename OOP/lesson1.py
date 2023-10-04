@@ -1,9 +1,11 @@
+import csv
 class Item:
 
     # Class attribute
     # Shared by all instances, it belongs to the class itself
     # it can also be accessed by instances
-    pay_rate  = 0.8
+    pay_rate  = 0.8 # The pay rate after 20% discount
+    all = []
 
     # name:str, ensures only string value is passed.
     # what if we want to ignore negative numbers?
@@ -19,6 +21,9 @@ class Item:
         self.price = price
         self.quantity = quantity
 
+        # Some modificiation
+        Item.all.append(self)
+
     def calcualte_total_price(self):
         return self.price * self.quantity
     
@@ -28,6 +33,23 @@ class Item:
         # The best practice here is to access attributes at class level
         self.price = self.price * self.pay_rate
 
+    @classmethod
+    def instantiate_from_csv(cls):
+        # cls : is reference to the class
+        with open("items.csv", 'r') as f:
+            reader = csv.DictReader(f)
+            items = list(reader)
+        print(items)
+        for item in items:
+            Item(
+                name=item.get('name'),
+                price=float(item.get('price')),
+                quantity=int(item.get('quantity'))
+            )
+
+    # How to represent the instance, similar __str__
+    def __repr__(self) -> str:
+        return f'Item({self.name}, {self.quantity})'
 
 item1 = Item("Phone", 100, 2)
 item2 = Item("Laptop", 3000, 4) # Try with minus signs
@@ -51,4 +73,8 @@ item2.apply_discount()
 print(item2.price)
 
 
-        
+# print all instances of our class
+print(Item.all)
+
+Item.instantiate_from_csv()
+print(Item.all)
