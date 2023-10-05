@@ -91,3 +91,5 @@ Item.instantiate_from_csv()
 print(Item.all)
 
 print(Item.is_integer(78.0))
+
+# Lesson was very unclear, so starting new one.
