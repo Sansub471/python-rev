@@ -51,3 +51,6 @@ anagrams = [
 
 for word1, word2 in anagrams:
     print(Anagram(word1, word2))
+
+# Tip : For first word increment the value for each character and for second word decrement the value
+# In the end, if all values are zero then the words are anagram otherwise not.
