@@ -22,6 +22,8 @@
 
 class Solution:
     def duplicates(self, arr, n):
+        # Using given array as hash table
+
     	# First check all the values that are 
     	# present in an array then go to that 
     	# values as indexes and increment by 
