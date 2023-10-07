@@ -12,3 +12,5 @@ def SumOfDigits(N):
         return SumOfDigits(sum)
 
 print(SumOfDigits(12345))
+
+# Tip : Try observing divisibility of 9 and answer the question
