@@ -21,13 +21,10 @@
 # 1+2+3+4+5+6+7+8+9+(1+0)+(1+1)+(1+2) = 51
 
 def sumOfDigit(N):
+    # From given hints
     if N < 10:
-        return int(N*(N+1)/2)
-    elif N < 100:
-        Q = N // 10
-        P = N % 10
-        S = Q * 45 + ((Q - 1)*Q / 2) * 10 + (P*(P+1)/2) + (P+1) * Q
-        return int(S)
+        return (N(N+1) // 2) # sum of natural numbers from 1 to N
+    
 
 def sumOfDigits(N):
     sum = 0
