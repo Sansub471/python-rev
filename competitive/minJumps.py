@@ -40,6 +40,7 @@ def minJumps(arr, n):
         # check if we have reached the end of array
         if i == len(arr) - 1 :
             return jump
+        
         # Updating maxReach
         maxReach = max(maxReach, i+arr[i])
 
