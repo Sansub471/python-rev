@@ -24,8 +24,16 @@
 def maxSubArraySum(arr, N):
     # Kadane's Algorithm
     # https://en.wikipedia.org/wiki/Maximum_subarray_problem
-    pass
+    best_sum = float('-inf')
+    current_sum = 0
+    for x in arr:
+        current_sum = max(x, current_sum + x)
+        best_sum = max(best_sum, current_sum)
+    return best_sum
 
+arr = [1,2,3,-2,5]
+N = len(arr)
+print(maxSubArraySum(arr, N))
 
 # Simple Approach:
 # https://www.interviewbit.com/blog/maximum-subarray-sum/
