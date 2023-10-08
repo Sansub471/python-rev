@@ -27,6 +27,7 @@ class Solution:
         return A[maj_index]
         
     # Function to check if the candidate occurs more than n/2 times
+    # counts the occurance of the candidate
     def isMajority(self, A, cand):
         count = 0
         for i in range(len(A)):
