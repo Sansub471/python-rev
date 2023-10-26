@@ -34,7 +34,7 @@ def kthSmallest(arr, l, r, k):
         l += 1
     return arr[k-1]
 
-# With hint, the solution could be
+# With hint, the solution could be quick select
 def kthSmallestElement(arr, l, r, k):
     pass
 
