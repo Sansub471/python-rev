@@ -19,6 +19,7 @@
 # Explanation: 
 # 5 is the 5th number of fibonacci series.
 
+# This is iterative solution, correct but takes too much time
 def nthFibonacci(n:int)->int:
     const = 1000000007
     t1 = t2 = 1
@@ -30,3 +31,12 @@ def nthFibonacci(n:int)->int:
     return fb % const
 
 print(nthFibonacci(17))
+
+# This is recursive solution. 
+# Takes a lot of memory, or something?
+def fibonacci(n:int):
+    if n == 0 or n == 1:
+        return n
+    return fibonacci(n-1) + fibonacci(n - 2)
+
+print(fibonacci(200))
