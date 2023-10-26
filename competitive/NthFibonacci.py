@@ -39,4 +39,24 @@ def fibonacci(n:int):
         return n
     return fibonacci(n-1) + fibonacci(n - 2)
 
-print(fibonacci(200))
+print(fibonacci(2))
+
+# This is the complete solution, not sure what this is :
+class Solution:
+    def nthFibonacci(self, n : int) -> int:
+        mod = 10**9 + 7
+
+        #initialize the dp array with 0 and 1 for base cases
+        dp = [0] * (n + 5) # list with zeros of size (n+5)
+        dp[0] = 0
+        dp[1] = 1
+
+        #compute the fibonacci numbers using dynamic programming
+        for i in range(2, n + 1):
+            dp[i] = (dp[i - 1] % mod + dp[i - 2] % mod) % mod
+        
+        #return the nth fibonacci number
+        return dp[n]
+    
+sl = Solution()
+print(sl.nthFibonacci(20))
