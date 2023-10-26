@@ -53,3 +53,17 @@ def equilibriumPoint(A, N):
 A = [9,10]
 N = len(A)
 print(equilibriumPoint(A, N))
+
+# Solution with hint
+def equilibriumPoint(A):
+    total = sum(A) # O(n)
+    left_sum = 0
+    for i in range(0, len(A)): # O(n)
+        if left_sum == total - A[i]:
+            return i + 1
+        left_sum += A[i]
+        total -= A[i]
+    return -1
+
+# Time complexity : O(n)
+# Space complexity : O(1)
