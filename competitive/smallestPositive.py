@@ -30,8 +30,14 @@ def smallestPositiveNumber(arr, n):
             low += 1
     # step 2 : the positive part starts at index 'low' to the end
     pos_len = len(arr[low:])
+    # step 3 :
+    for elem in arr[low:]:
+        print(elem)
+        if elem < pos_len:
+            arr[low + elem - 1] = -arr[low + elem - 1]
+    return arr
 
 
-arr = [1,2,3,4,5]
+arr = [0, -10, 1, 3, -20]
 n = len(arr)
 print(smallestPositiveNumber(arr, n))
