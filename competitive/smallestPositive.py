@@ -31,11 +31,18 @@ def smallestPositiveNumber(arr, n):
     # step 2 : the positive part starts at index 'low' to the end
     pos_len = len(arr[low:])
 
+    print("Low : ", low)
+    print("Arr : ", arr)
+    print("Pos_Length : ", pos_len)
+
     # step 3 : Use index to store information of digit occurence
     for elem in arr[low:]:
         if not elem > pos_len:
-            arr[low + elem - 1] = -arr[low + elem - 1]
-    
+            print(elem)
+            arr[low + elem - 1] = -abs(arr[low + elem - 1])
+            # abs() is necessary if same element in repeated
+    print("Negative : ", arr)
+
     # step 4 : check where are the negatives
     for i, elem in enumerate(arr[low:]):
         if elem > 0:
@@ -45,6 +52,8 @@ def smallestPositiveNumber(arr, n):
     return pos_len + 1
 
 
-arr = [0, 2, -20, 34, 7, 9, -10, 0, 32, 1, 3]
+arr = [9, 1, -2, 0, -1, -2, 1, -4, 2, -3]
 n = len(arr)
 print(smallestPositiveNumber(arr, n))
+
+arr = [9, 1, -2, 0, -1, -2, 1, -4, 2, -3]
