@@ -30,12 +30,19 @@ def smallestPositiveNumber(arr, n):
             low += 1
     # step 2 : the positive part starts at index 'low' to the end
     pos_len = len(arr[low:])
-    # step 3 :
+
+    # step 3 : Use index to store information of digit occurence
     for elem in arr[low:]:
-        print(elem)
         if elem < pos_len:
             arr[low + elem - 1] = -arr[low + elem - 1]
-    return arr
+    
+    # step 4 : check where are the negatives
+    for i, elem in enumerate(arr[low:]):
+        if elem > 0:
+            return i+1
+    
+    # All negative means, N+1 is the smallest integer
+    return pos_len + 1
 
 
 arr = [0, -10, 1, 3, -20]
