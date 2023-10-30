@@ -55,5 +55,3 @@ def smallestPositiveNumber(arr, n):
 arr = [9, 1, -2, 0, -1, -2, 1, -4, 2, -3]
 n = len(arr)
 print(smallestPositiveNumber(arr, n))
-
-arr = [9, 1, -2, 0, -1, -2, 1, -4, 2, -3]
