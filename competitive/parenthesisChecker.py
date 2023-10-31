@@ -34,9 +34,11 @@
 # the small bracket is not balanced and 
 # Hence , the output will be unbalanced.
 
+# Solution using stack
 def ispar(x):
     stack = []
     for char in x:
+        #print(stack)
         if char == '{' or char == '[' or char == '(':
             stack.append(char)
         elif char == '}' or char == ']' or char == ')':
@@ -50,5 +52,7 @@ def ispar(x):
                     return False
     return True if len(stack) == 0 else False
 
-x = ')'
+x = '(([{<A*(B+C)>}] - [{D/E}]) * {F[G] - H} / [I{J}])'
+y = '(((({{[<A*(B+C)>]} - [{D/E}]} * {{F[G] - H}} / [I{J}]) + [K<[L*M]>]) - {{M[(N+O)]} * [P{Q}]}) / [R<S>])'
 print(ispar(x))
+print(ispar(y))
