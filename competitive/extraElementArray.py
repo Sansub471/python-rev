@@ -20,6 +20,8 @@
 # Output: 3
 
 def findExtra(a, b, n):
-    for i in range(0, n):
+    for i in range(0, n - 1):
         if a[i] != b[i]:
             return i
+    # Reached here means, the last element is the extra one
+    return n - 1 # Zeroth index
