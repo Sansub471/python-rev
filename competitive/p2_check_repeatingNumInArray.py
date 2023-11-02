@@ -45,3 +45,8 @@ class Solution:
         if flag==False:
             res.append(-1)
         return res
+    
+sln = Solution()
+arr = [2,3,1,2,3]
+n = len(arr)
+print(sln.duplicates(arr, n))
