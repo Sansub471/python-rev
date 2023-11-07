@@ -23,7 +23,3 @@
 
 def rotateArr(A, D, N):
     pass
-
-
-# The exam is the next day
-# I have an exam on Wednesday, make sure to get it right.
