@@ -50,5 +50,3 @@ print(zeroOneTwo(arr, n))
 
 print("This is the code after hint : ")
 print(zerosOnesTwos(arr, n))
-
-# This looks easy but not a easy one to do.
