@@ -18,3 +18,5 @@
 # Explanation: No such triplet possible.
 
 # Hashing a big concept in programming.
+
+# Don't know how to find pythgorean concept in programming.
