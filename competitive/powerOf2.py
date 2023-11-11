@@ -12,9 +12,3 @@ def isPowerofTwo(n):
 
 n = 8
 print(isPowerofTwo(n))
-
-s = 'string'
-s= s[-1::-1]
-
-s = 'Nepal'+s
-print(s)
