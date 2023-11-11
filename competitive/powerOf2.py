@@ -10,5 +10,5 @@ def isPowerofTwo(n):
         return True
     return False
 
-n = 8
+n = 2
 print(isPowerofTwo(n))
