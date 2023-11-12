@@ -8,7 +8,7 @@
 # 1
 # Explanation:
 # 8 can be expressed
-# as 23.
+# as 2^3.
 
 # Example 2:
 
@@ -20,3 +20,23 @@
 # 7 can't be expressed
 # int the form xy.
 
+# The hint, is similar to finding whether a number is prime or not?
+
+def powerOfXtoY(N):
+    if N == 1:
+        return 1
+    i = 2
+    while(i*i <= N):
+        j = 2
+        while(j <= N):
+            if i**j == N:
+                return (i,j)
+                #return 1
+            j+= 1
+        i+= 1
+    return 0
+
+N = 625
+N = 243
+#N = 8
+print(powerOfXtoY(N))
