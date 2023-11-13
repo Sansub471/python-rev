@@ -20,3 +20,9 @@
 # Hashing a big concept in programming.
 
 # Don't know how to find pythgorean concept in programming.
+
+# def PythagoreanTriplets(arr, N):
+#     for i in range(0, len(arr) - 1):
+#         for j in range(0, len(arr)):
+#             if j != i or j != i+1:
+#                 if 
