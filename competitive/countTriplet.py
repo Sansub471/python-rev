@@ -66,8 +66,31 @@
 def countTriplets(arr, n):
     arr.sort(reverse=False) # Sort the elements first
 
-    low = 0
-    high = len(arr) - 2
+    # Initializing the count of tirplets as zero
+    ans = 0
 
-    for i in range(0, len(arr)):
-        pass
+    # Iterating over the array in reverse order
+    for i in range(len(arr) - 1, -1, -1):
+        # Initializing the two pointers, one at the end one at the beginning
+        low = 0
+        high = i - 1
+
+        # Using the two pointer approach to find the triplets
+        while( low < high):
+            # If the given condition is satisfied, increment the count and move the pointers
+            if arr[i] == arr[low] + arr[high]:
+                ans += 1
+                low += 1
+                high -= 1
+            # If the sum is less than the target, move the left pointer
+            elif arr[i] > arr[low] + arr[high]:
+                low += 1
+            # If the sum is greater than the target, move the right pointer
+            else:
+                high -= 1
+    # Returning the count of triplets
+    return ans
+
+arr = [1,5,3,2]
+N = len(arr)
+print(countTriplets(arr, N))
