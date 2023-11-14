@@ -70,7 +70,7 @@ def countTriplets(arr, n):
     ans = 0
 
     # Iterating over the array in reverse order
-    for i in range(len(arr) - 1, -1, -1):
+    for i in range(len(arr) - 1, 0, -1):
         # Initializing the two pointers, one at the end one at the beginning
         low = 0
         high = i - 1
