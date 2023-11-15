@@ -34,5 +34,10 @@
 # Complete doUnion function that takes a, n, b, m as parameters and returns the count of union elements of the two arrays. 
 # The printing is done by the driver code.
 
+
+# Hint : hash set
 def doUnion(a, n, b, m):
     pass
+
+# There is no solution found do far.
+# The world cup is going on.
