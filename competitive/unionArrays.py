@@ -38,6 +38,3 @@
 # Hint : hash set
 def doUnion(a, n, b, m):
     pass
-
-# There is no solution found do far.
-# The world cup is going on.
