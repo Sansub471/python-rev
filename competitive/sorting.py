@@ -9,3 +9,5 @@ def sorting(arr):
     return arr
 
 print(sorting(arr))
+
+# Today is WC final, Aussies winning
