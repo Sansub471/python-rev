@@ -9,3 +9,5 @@ def sorting(arr):
     return arr
 
 print(sorting(arr))
+
+# Time to go home, it's a bad day.
